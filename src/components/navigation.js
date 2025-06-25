@@ -17,16 +17,23 @@ export default function Navigation() {
           <Button
             component={Link}
             href="/"
-            color={pathname === "/" ? "warning" : "inherit"}
+            color={pathname === "/" ? "secondary" : "inherit"}
           >
             Home
           </Button>
           <Button
             component={Link}
             href="/blogs"
-            color={pathname === "/blogs" ? "warning" : "inherit"}
+            color={pathname === "/blogs" ? "secondary" : "inherit"}
           >
             Blogs
+          </Button>
+          <Button
+            component={Link}
+            href="/users"
+            color={pathname === "/users" ? "secondary" : "inherit"}
+          >
+            Users
           </Button>
         </Box>
       </Toolbar>

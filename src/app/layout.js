@@ -1,5 +1,6 @@
 import Navigation from "@/components/navigation"; // @ => src klasörüne denk gelir.
 import "./globals.css";
+import { Container } from "@mui/material";
 
 // sitenin titleını buradan ayarlarız. her sayfada aynı title görünmemesini istersek diğer sayfalarda metadata propunu ezebiliriz.
 // title altındaki default genel olarak gelir. diğer pagelerden ezersek %s yer tutucusuna değer veririz.
@@ -12,8 +13,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navigation />
-        {children}
+        <header>
+          <Navigation />
+        </header>
+        <main>
+          <Container sx={{ my: 3 }}>{children}</Container>
+        </main>
       </body>
     </html>
   );
